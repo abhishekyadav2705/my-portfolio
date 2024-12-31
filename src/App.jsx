@@ -20,8 +20,8 @@ function App() {
   const [override, setOverride] = useState(false);
   const sectionsRef = useRef({});
 
-  const openingHour = 11; // Easily adjustable opening hour (24-hour format)
-  const closingHour = 17; // Easily adjustable closing hour (24-hour format)
+  const openingHour = 8; // Easily adjustable opening hour (24-hour format)
+  const closingHour = 24; // Easily adjustable closing hour (24-hour format)
 
   useEffect(() => {
     const checkTime = () => {

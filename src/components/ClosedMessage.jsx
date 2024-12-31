@@ -80,8 +80,8 @@ const Emoji = styled.span`
 `;
 
 const ClosedMessage = ({ onToggle }) => {
-  const openingHour = 11; // Easily adjustable opening hour (24-hour format)
-  const closingHour = 19; // Easily adjustable closing hour (24-hour format)
+  const openingHour = 8; // Easily adjustable opening hour (24-hour format)
+  const closingHour = 24; // Easily adjustable closing hour (24-hour format)
 
   return (
     <MessageContainer>

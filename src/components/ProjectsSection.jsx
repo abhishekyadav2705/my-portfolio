@@ -52,7 +52,7 @@ const ProjectContainer = styled.div`
 const projects = [
   {
     image: "/images/portfolio.jpg",
-    name: "My Portfolio",
+    name: "Spring & React Showcase 🌿⚛️",
     description:
       "Developed a portfolio in React.js🚀, showcasing my work and skills. Integrated smooth animations, a responsive design, and dynamic content. Deployed on Netlify for seamless access and performance.",
     techStack: "React.js",
@@ -63,7 +63,7 @@ const projects = [
 
   {
     image: "/images/uber.jpg",
-    name: "Uber-Backend",
+    name: "Uber-Backend 🚗",
     description:
       "Uber-App is a robust ride-sharing service application developed using Spring Boot. The app utilizes the PostGIS extension to efficiently fetch and process the locations of riders and drivers. It features production-ready APIs and incorporates advanced strategies like Surge Pricing and Driver Matching to enhance user experience.",
     techStack: "Spring Boot, PostgreSQL, RESTful APIs",
@@ -72,15 +72,26 @@ const projects = [
     type: "backend",
   },
   {
+    image: "/images/weather-card.jpg",
+    name: "Weather Whiz 🌤️",
+    description:
+      "Discover the ultimate weather companion with WeatherWhiz! Whether it's rain, shine, or storm, WeatherWhiz has you covered. Stay updated with real-time forecasts and get personalized tips for your day. Allow us to access your location, and we’ll instantly fetch the latest weather updates for your city. No need to type a thing—just sit back, relax, and enjoy the accurate forecast for your current location. Whether you need to grab an umbrella ☔, wear your coolest shades 😎, or bundle up for the snow ❄️, WeatherWhiz will ensure you’re always prepared!",
+    techStack: "React",
+    githubLink: "https://github.com/abhishekyadav2705/weather-app/",
+    liveLink: "https://abhishekyadavsweather-app.netlify.app/",
+    type: "frontend",
+  },
+  {
     image: "/images/usePopcornTheme.jpg",
-    name: "usePopcorn",
+    name: "usePopcorn 🍿",
     description:
       "usePopcorn is a dynamic movie rating application built with React, leveraging the OMDB API to fetch and display information about movies. The app caters to fans of both Bollywood and Hollywood, providing a comprehensive database of movies along with their ratings and other essential details.",
     techStack: "React",
     githubLink: "https://github.com/abhishekyadav2705/usePopcorn",
-    liveLink: "https://project1.live",
+    liveLink: "https://yadavabhishekusepopcorn.netlify.app",
     type: "frontend",
   },
+
   // Add more projects as needed
 ];
 
