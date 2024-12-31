@@ -1,0 +1,53 @@
+/* Apply custom fonts globally */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Styling for Navbar links */
+.navbar-link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 15px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect with underline */
+.navbar-link:hover {
+  color: #007bff; /* Change to desired hover color */
+}
+
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #007bff;
+  transition: width 0.3s;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
