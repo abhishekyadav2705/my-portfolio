@@ -80,8 +80,8 @@ const Emoji = styled.span`
 `;
 
 const ClosedMessage = ({ onToggle }) => {
-  const openingTime = new Date();
-  openingTime.setHours(11, 0, 0, 0); // Set opening time to 11:00 AM
+  const openingHour = 11; // Easily adjustable opening hour (24-hour format)
+  const closingHour = 19; // Easily adjustable closing hour (24-hour format)
 
   return (
     <MessageContainer>
@@ -89,7 +89,7 @@ const ClosedMessage = ({ onToggle }) => {
         Wake up the Developer <Emoji>🌞</Emoji>
       </ToggleButton>
       <Title>We're Closed!</Title>
-      <CountdownTimer openingTime={openingTime} />
+      <CountdownTimer openingHour={openingHour} />
       <Subtitle>Currently, the developer is on power saving mode 😴⚡</Subtitle>
       <GifContainer>
         <iframe
@@ -104,7 +104,8 @@ const ClosedMessage = ({ onToggle }) => {
         ></iframe>
       </GifContainer>
       <Subtitle>
-        Come back between 11 AM and 10 PM for more awesomeness!
+        Come back between {openingHour}:00 AM - {closingHour}:00 PM for more
+        awesomeness!
       </Subtitle>
     </MessageContainer>
   );

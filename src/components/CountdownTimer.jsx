@@ -8,9 +8,17 @@ const TimerContainer = styled.div`
   font-weight: bold;
 `;
 
-const CountdownTimer = ({ openingTime }) => {
+const CountdownTimer = ({ openingHour }) => {
   const calculateTimeLeft = () => {
     const currentTime = new Date();
+    let openingTime = new Date();
+    openingTime.setHours(openingHour, 0, 0, 0);
+
+    if (currentTime >= openingTime) {
+      // If the current time is past today's opening time, set the next opening time to tomorrow
+      openingTime.setDate(openingTime.getDate() + 1);
+    }
+
     const timeDiff = openingTime - currentTime;
 
     let hours = Math.floor(
@@ -30,7 +38,7 @@ const CountdownTimer = ({ openingTime }) => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [openingTime]);
+  }, [openingHour]);
 
   return (
     <TimerContainer>

@@ -51,15 +51,16 @@ const ProjectContainer = styled.div`
 
 const projects = [
   {
-    image: "/images/usePopcornTheme.jpg",
-    name: "usePopcorn",
+    image: "/images/portfolio.jpg",
+    name: "My Portfolio",
     description:
-      "usePopcorn is a dynamic movie rating application built with React, leveraging the OMDB API to fetch and display information about movies. The app caters to fans of both Bollywood and Hollywood, providing a comprehensive database of movies along with their ratings and other essential details.",
-    techStack: "React",
-    githubLink: "https://github.com/abhishekyadav2705/usePopcorn",
-    liveLink: "https://project1.live",
+      "Developed a portfolio in React.js🚀, showcasing my work and skills. Integrated smooth animations, a responsive design, and dynamic content. Deployed on Netlify for seamless access and performance.",
+    techStack: "React.js",
+    githubLink: "https://github.com/abhishekyadav2705/my-portfolio/",
+    liveLink: "https://abhishekyadavsportfolio.netlify.app/",
     type: "frontend",
   },
+
   {
     image: "/images/uber.jpg",
     name: "Uber-Backend",
@@ -71,13 +72,13 @@ const projects = [
     type: "backend",
   },
   {
-    image: "/images/portfolio.jpg",
-    name: "My Portfolio",
+    image: "/images/usePopcornTheme.jpg",
+    name: "usePopcorn",
     description:
-      "Developed a portfolio in React.js🚀, showcasing my work and skills. Integrated smooth animations, a responsive design, and dynamic content. Deployed on Netlify for seamless access and performance.",
-    techStack: "React.js",
-    githubLink: "https://github.com/abhishekyadav2705/Uber-Backend",
-    liveLink: "https://project2.live",
+      "usePopcorn is a dynamic movie rating application built with React, leveraging the OMDB API to fetch and display information about movies. The app caters to fans of both Bollywood and Hollywood, providing a comprehensive database of movies along with their ratings and other essential details.",
+    techStack: "React",
+    githubLink: "https://github.com/abhishekyadav2705/usePopcorn",
+    liveLink: "https://project1.live",
     type: "frontend",
   },
   // Add more projects as needed
