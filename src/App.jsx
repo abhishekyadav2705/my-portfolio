@@ -12,14 +12,12 @@ import InteractiveTimeline from "./components/InteractiveTimeline";
 import ClosedMessage from "./components/ClosedMessage";
 import SkillsSection from "./components/SkillsSection";
 import ProgressBar from "./components/ProgressBar";
-import Popup from "./components/Popup";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [override, setOverride] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
   const sectionsRef = useRef({});
 
   const openingHour = 11; // Easily adjustable opening hour (24-hour format)
@@ -36,23 +34,10 @@ function App() {
       }
     };
 
-    const checkScreenSize = () => {
-      if (window.innerWidth < 1024) {
-        setShowPopup(true);
-      } else {
-        setShowPopup(false);
-      }
-    };
-
     checkTime();
-    checkScreenSize();
     const interval = setInterval(checkTime, 60000);
-    window.addEventListener("resize", checkScreenSize);
 
-    return () => {
-      clearInterval(interval);
-      window.removeEventListener("resize", checkScreenSize);
-    };
+    return () => clearInterval(interval);
   }, [openingHour, closingHour]);
 
   const handleToggle = () => {
@@ -107,7 +92,6 @@ function App() {
     <ThemeProvider>
       <div className="App">
         <ProgressBar />
-        {showPopup && <Popup onClose={() => setShowPopup(false)} />}
         {isOpen || override ? (
           <>
             <Head />
