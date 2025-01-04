@@ -12,7 +12,6 @@ const Header = styled.header`
   padding: 1rem;
   background: ${(props) => props.theme.background};
   color: ${(props) => props.theme.color};
-  transition: background 0.3s ease, color 0.3s ease;
   font-family: "Montserrat", sans-serif;
 `;
 
