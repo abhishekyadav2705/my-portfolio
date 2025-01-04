@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const Card = styled.div`
@@ -12,6 +12,14 @@ const Card = styled.div`
   background-color: #fff;
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
+  position: relative;
+
+  ${(props) =>
+    props.inProgress &&
+    css`
+      filter: grayscale(100%);
+      opacity: 0.7;
+    `}
 
   &:hover {
     transform: translateY(-10px);
@@ -82,6 +90,19 @@ const Button = styled.a`
   &:hover {
     transform: scale(1.05);
   }
+
+  ${(props) =>
+    props.disabled &&
+    css`
+      pointer-events: none;
+      background-color: #ccc;
+      color: #666;
+      box-shadow: none;
+    `}
+
+  svg {
+    margin-right: 0.5rem; /* Add space between icon and text */
+  }
 `;
 
 const GithubButton = styled(Button)`
@@ -102,6 +123,17 @@ const LiveButton = styled(Button)`
   }
 `;
 
+const Label = styled.div`
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 5px 10px;
+  background-color: ${(props) => (props.inProgress ? "#ff6347" : "#28a745")};
+  color: white;
+  border-radius: 5px;
+  font-size: 0.9rem;
+`;
+
 const ProjectCard = ({
   image,
   name,
@@ -109,6 +141,7 @@ const ProjectCard = ({
   techStack,
   githubLink,
   liveLink,
+  inProgress,
 }) => {
   const [showFullDescription, setShowFullDescription] = useState(false);
 
@@ -120,7 +153,10 @@ const ProjectCard = ({
     description.length > 40 ? description.slice(0, 40) + "..." : description;
 
   return (
-    <Card>
+    <Card inProgress={inProgress}>
+      <Label inProgress={inProgress}>
+        {inProgress ? "In Development 🧑‍💻" : "Deployed 🚀"}
+      </Label>
       <Image src={image} alt={name} />
       <ProjectName>{name}</ProjectName>
       <Description>
@@ -137,11 +173,17 @@ const ProjectCard = ({
           href={githubLink}
           target="_blank"
           rel="noopener noreferrer"
+          disabled={inProgress}
         >
-          <FaGithub />
+          <FaGithub /> Github
         </GithubButton>
-        <LiveButton href={liveLink} target="_blank" rel="noopener noreferrer">
-          <FaExternalLinkAlt />
+        <LiveButton
+          href={liveLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          disabled={inProgress}
+        >
+          <FaExternalLinkAlt /> Live
         </LiveButton>
       </Links>
     </Card>

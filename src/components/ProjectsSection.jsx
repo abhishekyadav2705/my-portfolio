@@ -1,13 +1,12 @@
 import React, { useContext, useState } from "react";
 import styled from "styled-components";
-import { ThemeContext } from "../context/ThemeContext"; // Import ThemeContext
+import { ThemeContext } from "../context/ThemeContext";
 import ProjectCard from "./ProjectCard";
 
 const Section = styled.section`
   padding: 2rem 1rem;
-  background-color: ${(props) =>
-    props.theme.background}; // Apply theme background
-  color: ${(props) => props.theme.color}; // Apply theme color
+  background-color: ${(props) => props.theme.background};
+  color: ${(props) => props.theme.color};
   font-family: "Montserrat", sans-serif;
 `;
 
@@ -26,7 +25,7 @@ const Header = styled.div`
 const Title = styled.h2`
   font-size: 2rem;
   margin: 0;
-  color: ${(props) => props.theme.color}; // Apply theme color
+  color: ${(props) => props.theme.color};
 `;
 
 const Dropdown = styled.select`
@@ -59,8 +58,8 @@ const projects = [
     githubLink: "https://github.com/abhishekyadav2705/my-portfolio/",
     liveLink: "https://abhishekyadavsportfolio.netlify.app/",
     type: "frontend",
+    inProgress: false,
   },
-
   {
     image: "/images/uber.jpg",
     name: "Uber-Backend 🚗",
@@ -68,8 +67,9 @@ const projects = [
       "Uber-App is a robust ride-sharing service application developed using Spring Boot. The app utilizes the PostGIS extension to efficiently fetch and process the locations of riders and drivers. It features production-ready APIs and incorporates advanced strategies like Surge Pricing and Driver Matching to enhance user experience.",
     techStack: "Spring Boot, PostgreSQL, RESTful APIs",
     githubLink: "https://github.com/abhishekyadav2705/Uber-Backend",
-    liveLink: "https://project2.live",
+    liveLink: "",
     type: "backend",
+    inProgress: true, // Mark this project as in progress
   },
   {
     image: "/images/weather-card.jpg",
@@ -80,6 +80,7 @@ const projects = [
     githubLink: "https://github.com/abhishekyadav2705/weather-app/",
     liveLink: "https://abhishekyadavsweather-app.netlify.app/",
     type: "frontend",
+    inProgress: false,
   },
   {
     image: "/images/usePopcornTheme.jpg",
@@ -88,11 +89,10 @@ const projects = [
       "usePopcorn is a dynamic movie rating application built with React, leveraging the OMDB API to fetch and display information about movies. The app caters to fans of both Bollywood and Hollywood, providing a comprehensive database of movies along with their ratings and other essential details.",
     techStack: "React",
     githubLink: "https://github.com/abhishekyadav2705/usePopcorn",
-    liveLink: "https://yadavabhishekusepopcorn.netlify.app",
+    liveLink: "https://abhishekyadavsusepopcorn.netlify.app/",
     type: "frontend",
+    inProgress: false,
   },
-
-  // Add more projects as needed
 ];
 
 const ProjectsSection = () => {
@@ -125,6 +125,7 @@ const ProjectsSection = () => {
               techStack={project.techStack}
               githubLink={project.githubLink}
               liveLink={project.liveLink}
+              inProgress={project.inProgress}
             />
           ))}
         </ProjectContainer>
