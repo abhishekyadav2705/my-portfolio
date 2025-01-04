@@ -83,6 +83,17 @@ const projects = [
     inProgress: false,
   },
   {
+    image: "/images/linkedIn.jpg",
+    name: "LinkedIn Microservices 🍃⚙️",
+    description:
+      "A dynamic, scalable LinkedIn backend powered by Spring Boot microservices, enabling seamless professional connections with efficient data handling, API gateways, and cloud integration.",
+    techStack: "Spring Microservices",
+    githubLink: "https://github.com/abhishekyadav2705/usePopcorn",
+    liveLink: "https://abhishekyadavsusepopcorn.netlify.app/",
+    type: "backend",
+    inProgress: true,
+  },
+  {
     image: "/images/usePopcornTheme.jpg",
     name: "usePopcorn 🍿",
     description:
