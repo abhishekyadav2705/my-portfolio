@@ -98,6 +98,22 @@ const skills = [
     name: "Kubernetes",
     logo: "https://th.bing.com/th/id/OIP.wOMtZQ4cb_gxIZ1HkiKOfwHaDw?rs=1&pid=ImgDetMain",
   },
+  {
+    name: "Python",
+    logo: "https://logohistory.net/wp-content/uploads/2023/06/Python-Emblem.png",
+  },
+  {
+    name: "Postman",
+    logo: "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_1080,q_100,w_1080/v1/gcs/platform-data-dsc/events/postman_xPdRyfy.jpg",
+  },
+  {
+    name: "Swagger",
+    logo: "https://static-00.iconduck.com/assets.00/swagger-icon-2048x2048-563qbzey.png",
+  },
+  {
+    name: "Kafka",
+    logo: "https://th.bing.com/th/id/OIP.zHIfKvuVJg-dXJDUPI_foQHaMB?rs=1&pid=ImgDetMain",
+  },
 ];
 
 const SkillsSection = () => {
