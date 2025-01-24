@@ -104,6 +104,17 @@ const projects = [
     type: "frontend",
     inProgress: false,
   },
+  {
+    image: "/images/Zomato-Backend.jpg",
+    name: "Zomato Backend 🍅",
+    description:
+      "This project is a backend system for a Zomato-like food delivery application. It is designed to handle various functionalities such as managing users, restaurants, menus, orders, and deliveries. Built with Spring Boot, the system ensures scalability, high performance, and efficient handling of requests in a production-grade environment.",
+    techStack: "Spring Boot",
+    githubLink: "https://github.com/abhishekyadav2705/usePopcorn",
+    liveLink: "https://abhishekyadavsusepopcorn.netlify.app/",
+    type: "backend",
+    inProgress: true,
+  },
 ];
 
 const ProjectsSection = () => {
