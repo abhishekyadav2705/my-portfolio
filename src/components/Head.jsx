@@ -75,10 +75,7 @@ const Head = () => {
   return (
     <Header theme={theme}>
       <LogoContainer>
-        <LogoImage
-          src="https://media.licdn.com/dms/image/v2/D5603AQHXMBJhnNuO8w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1710858274106?e=1741219200&v=beta&t=CFXXgQg7Xkg34f_EMc5J_xkNAuG-SYTVs3xRusz-Wh4"
-          alt="Logo"
-        />
+        <LogoImage src="/images/logo.jpg" alt="Logo" />
       </LogoContainer>
       <NavLinks>
         <NavLink href="#about">About</NavLink>

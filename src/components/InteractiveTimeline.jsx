@@ -85,7 +85,7 @@ const InteractiveTimeline = () => {
     },
     {
       year: "2022",
-      description: "Joined Infosys as a System Engineer 🚀",
+      description: "Joined Infosys as a Software Engineer 🚀",
       left: false,
     },
     // Add more events here
