@@ -50,14 +50,14 @@ const ProjectContainer = styled.div`
 
 const projects = [
   {
-    image: "/images/portfolio.jpg",
-    name: "Spring & React Showcase 🌿⚛️",
+    image: "/images/blog-img.png",
+    name: "Blogify 👻",
     description:
-      "Developed a portfolio in React.js🚀, showcasing my work and skills. Integrated smooth animations, a responsive design, and dynamic content. Deployed on Netlify for seamless access and performance.",
-    techStack: "React.js",
-    githubLink: "https://github.com/abhishekyadav2705/my-portfolio/",
-    liveLink: "https://abhishekyadavsportfolio.netlify.app/",
-    type: "frontend",
+      "Blogify is a full-stack blogging application built using Spring Boot for the backend and React for the frontend. This platform enables users to create, edit, and manage blog posts effortlessly, providing a seamless and interactive experience.",
+    techStack: "Spring Boot",
+    githubLink: "https://github.com/abhishekyadav2705/my-blog",
+    liveLink: "https://abhishekyadavsblogs.netlify.app/",
+    type: "backend",
     inProgress: false,
   },
   {
@@ -70,6 +70,17 @@ const projects = [
     liveLink: "",
     type: "backend",
     inProgress: true, // Mark this project as in progress
+  },
+  {
+    image: "/images/portfolio.jpg",
+    name: "Spring & React Showcase 🌿⚛️",
+    description:
+      "Developed a portfolio in React.js🚀, showcasing my work and skills. Integrated smooth animations, a responsive design, and dynamic content. Deployed on Netlify for seamless access and performance.",
+    techStack: "React.js",
+    githubLink: "https://github.com/abhishekyadav2705/my-portfolio/",
+    liveLink: "https://abhishekyadavsportfolio.netlify.app/",
+    type: "frontend",
+    inProgress: false,
   },
   {
     image: "/images/weather-card.jpg",
