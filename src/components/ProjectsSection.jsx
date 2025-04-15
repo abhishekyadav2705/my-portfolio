@@ -55,8 +55,10 @@ const projects = [
     description:
       "Blogify is a full-stack blogging application built using Spring Boot for the backend and React for the frontend. This platform enables users to create, edit, and manage blog posts effortlessly, providing a seamless and interactive experience.",
     techStack: "Spring Boot",
-    githubLink: "https://github.com/abhishekyadav2705/my-blog",
+    githubLink: "https://github.com/abhishekyadav2705/my-blog-backend",
     liveLink: "https://abhishekyadavsblogs.netlify.app/",
+    swaggerLink:
+      "https://my-blog-backend-production-c525.up.railway.app/swagger-ui/index.html",
     type: "backend",
     inProgress: false,
   },
@@ -68,8 +70,9 @@ const projects = [
     techStack: "Spring Boot, PostgreSQL, RESTful APIs",
     githubLink: "https://github.com/abhishekyadav2705/Uber-Backend",
     liveLink: "",
+    swaggerLink: "",
     type: "backend",
-    inProgress: true, // Mark this project as in progress
+    inProgress: true,
   },
   {
     image: "/images/portfolio.jpg",
@@ -79,6 +82,7 @@ const projects = [
     techStack: "React.js",
     githubLink: "https://github.com/abhishekyadav2705/my-portfolio/",
     liveLink: "https://abhishekyadavsportfolio.netlify.app/",
+    swaggerLink: "",
     type: "frontend",
     inProgress: false,
   },
@@ -86,10 +90,11 @@ const projects = [
     image: "/images/weather-card.jpg",
     name: "Weather Whiz 🌤️",
     description:
-      "Discover the ultimate weather companion with WeatherWhiz! Whether it's rain, shine, or storm, WeatherWhiz has you covered. Stay updated with real-time forecasts and get personalized tips for your day. Allow us to access your location, and we’ll instantly fetch the latest weather updates for your city. No need to type a thing—just sit back, relax, and enjoy the accurate forecast for your current location. Whether you need to grab an umbrella ☔, wear your coolest shades 😎, or bundle up for the snow ❄️, WeatherWhiz will ensure you’re always prepared!",
+      "Discover the ultimate weather companion with WeatherWhiz! Whether it's rain, shine, or storm, WeatherWhiz has you covered. Stay updated with real-time forecasts and get personalized tips for your day. Allow us to access your location, and we’ll instantly fetch the latest weather updates for your city. No need to type a thing—just sit back, relax, and enjoy the accurate forecast for your current location.",
     techStack: "React",
     githubLink: "https://github.com/abhishekyadav2705/weather-app/",
     liveLink: "https://abhishekyadavsweather-app.netlify.app/",
+    swaggerLink: "",
     type: "frontend",
     inProgress: false,
   },
@@ -101,6 +106,7 @@ const projects = [
     techStack: "Spring Microservices",
     githubLink: "https://github.com/abhishekyadav2705/usePopcorn",
     liveLink: "https://abhishekyadavsusepopcorn.netlify.app/",
+    swaggerLink: "",
     type: "backend",
     inProgress: true,
   },
@@ -112,6 +118,7 @@ const projects = [
     techStack: "React",
     githubLink: "https://github.com/abhishekyadav2705/usePopcorn",
     liveLink: "https://abhishekyadavsusepopcorn.netlify.app/",
+    swaggerLink: "",
     type: "frontend",
     inProgress: false,
   },
@@ -123,13 +130,14 @@ const projects = [
     techStack: "Spring Boot",
     githubLink: "https://github.com/abhishekyadav2705/usePopcorn",
     liveLink: "https://abhishekyadavsusepopcorn.netlify.app/",
+    swaggerLink: "",
     type: "backend",
     inProgress: true,
   },
 ];
 
 const ProjectsSection = () => {
-  const { theme } = useContext(ThemeContext); // Use theme context
+  const { theme } = useContext(ThemeContext);
   const [filter, setFilter] = useState("all");
 
   const filteredProjects =
@@ -158,6 +166,7 @@ const ProjectsSection = () => {
               techStack={project.techStack}
               githubLink={project.githubLink}
               liveLink={project.liveLink}
+              swaggerLink={project.swaggerLink}
               inProgress={project.inProgress}
             />
           ))}

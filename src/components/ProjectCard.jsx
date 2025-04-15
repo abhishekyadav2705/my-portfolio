@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { BiBookBookmark } from "react-icons/bi"; // Icon for Swagger
 
 const Card = styled.div`
   border: 1px solid #ddd;
@@ -71,6 +72,7 @@ const TechStack = styled.p`
 const Links = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 1rem;
 `;
 
@@ -83,7 +85,7 @@ const Button = styled.a`
   color: white;
   border-radius: 5px;
   text-decoration: none;
-  margin: 0 0.5rem;
+  margin: 0.25rem;
   box-shadow: 0 4px 8px rgba(0, 123, 255, 0.5);
   transition: background-color 0.3s, transform 0.3s;
 
@@ -101,25 +103,30 @@ const Button = styled.a`
     `}
 
   svg {
-    margin-right: 0.5rem; /* Add space between icon and text */
+    margin-right: 0.5rem;
   }
 `;
 
 const GithubButton = styled(Button)`
   background-color: #333;
-  margin-right: 0.5rem;
-
   &:hover {
     background-color: #111;
   }
 `;
 
 const LiveButton = styled(Button)`
-  margin-left: 0.5rem;
   background-color: #28a745;
 
   &:hover {
     background-color: #218838;
+  }
+`;
+
+const SwaggerButton = styled(Button)`
+  background-color: #6f42c1;
+
+  &:hover {
+    background-color: #5a32a3;
   }
 `;
 
@@ -141,6 +148,7 @@ const ProjectCard = ({
   techStack,
   githubLink,
   liveLink,
+  swaggerLink,
   inProgress,
 }) => {
   const [showFullDescription, setShowFullDescription] = useState(false);
@@ -185,6 +193,15 @@ const ProjectCard = ({
         >
           <FaExternalLinkAlt /> Live
         </LiveButton>
+        {swaggerLink && (
+          <SwaggerButton
+            href={swaggerLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <BiBookBookmark /> Swagger
+          </SwaggerButton>
+        )}
       </Links>
     </Card>
   );
