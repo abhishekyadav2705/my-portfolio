@@ -106,22 +106,46 @@ const DescriptionList = styled.ul`
   gap: 0.5rem;
 `;
 
-const DescriptionItem = styled.li`
-  display: flex;
-  align-items: center;
-  background: ${(props) => props.theme.background};
-  border-radius: 5px;
-  padding: 0.5rem;
-  transition: background 0.3s;
-
-  &:hover {
-    background: #e7e7e7;
-  }
-`;
-
 const CheckIcon = styled(FaCheckCircle)`
   margin-right: 0.5rem;
   color: #007bff;
+`;
+
+const Highlight = styled.span`
+  font-weight: 600;
+  color: #4a90e2; /* soft blue */
+  background-color: rgba(74, 144, 226, 0.1);
+  padding: 0.1rem 0.4rem;
+  border-radius: 6px;
+`;
+
+const Metric = styled.span`
+  font-weight: 600;
+  color: #2e7d32; /* soft green */
+  background-color: rgba(46, 125, 50, 0.08);
+  padding: 0.1rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+`;
+
+const DescriptionItem = styled.li`
+  display: flex;
+  align-items: flex-start;
+  background: ${(props) => props.theme.background};
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  line-height: 1.7;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    background: rgba(0, 123, 255, 0.05);
+  }
+
+  span {
+    display: inline-block;
+  }
 `;
 
 const ExperienceSection = () => {
@@ -149,33 +173,51 @@ const ExperienceSection = () => {
           <DescriptionList theme={theme}>
             <DescriptionItem theme={theme}>
               <CheckIcon />
-              Developed and maintained web applications using Java and Spring
-              Boot.
+              <span>
+                Developed and integrated an{" "}
+                <Highlight>AI-driven predictive model</Highlight> into a
+                ticketing system, resulting in a <Metric>70% reduction</Metric>{" "}
+                in resolution time, boosting
+                <Highlight>client satisfaction</Highlight> and{" "}
+                <Highlight>operational efficiency</Highlight>.
+              </span>
+            </DescriptionItem>
+
+            <DescriptionItem theme={theme}>
+              <CheckIcon />
+              <span>
+                Optimized <Highlight>backend throughput</Highlight> via{" "}
+                <Highlight>multithreading</Highlight> in Java, allowing{" "}
+                <Metric>3x more requests</Metric> per second under peak load.
+              </span>
+            </DescriptionItem>
+
+            <DescriptionItem theme={theme}>
+              <CheckIcon />
+              <span>
+                Automated <Metric>90% of routine backend tasks</Metric> using{" "}
+                <Highlight>Spring Scheduler</Highlight>, reducing manual effort
+                and <Highlight>downtime</Highlight>.
+              </span>
+            </DescriptionItem>
+
+            <DescriptionItem theme={theme}>
+              <CheckIcon />
+              <span>
+                Built and deployed <Metric>20+ RESTful APIs</Metric>, supporting{" "}
+                <Metric>10K+ daily requests</Metric>
+                with <Metric>&lt;300ms</Metric> response time and{" "}
+                <Metric>99.9% uptime</Metric>.
+              </span>
             </DescriptionItem>
             <DescriptionItem theme={theme}>
               <CheckIcon />
-              Designed and implemented RESTful APIs for various models.
-            </DescriptionItem>
-            <DescriptionItem theme={theme}>
-              <CheckIcon />
-              Collaborated with front-end developers to integrate user-facing
-              elements with server-side logic.
-            </DescriptionItem>
-            <DescriptionItem theme={theme}>
-              <CheckIcon />
-              Worked on various Java-based projects, enhancing features and bug
-              fixing.
-            </DescriptionItem>
-            <DescriptionItem theme={theme}>
-              <CheckIcon />
-              Worked closely with clients to gather requirements and translate
-              them into technical specifications for implementation.
-            </DescriptionItem>
-            <DescriptionItem theme={theme}>
-              <CheckIcon />
-              Continuously updated skills through training courses, workshops,
-              and self-study—staying current on industry trends and emerging
-              technologies.
+              <span>
+                Collaborated with <Highlight>frontend developers</Highlight> to
+                integrate
+                <Highlight>user-facing elements</Highlight> with{" "}
+                <Highlight>server-side logic</Highlight>.
+              </span>
             </DescriptionItem>
           </DescriptionList>
         </JobContainer>
