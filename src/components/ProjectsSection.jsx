@@ -64,7 +64,7 @@ const projects = [
   },
   {
     image: "/images/uber.jpg",
-    name: "Uber-Backend 🚗",
+    name: "Uber-Backend Simulation 🚗",
     description:
       "Uber-App is a robust ride-sharing service application developed using Spring Boot. The app utilizes the PostGIS extension to efficiently fetch and process the locations of riders and drivers. It features production-ready APIs and incorporates advanced strategies like Surge Pricing and Driver Matching to enhance user experience.",
     techStack: "Spring Boot, PostgreSQL, RESTful APIs",
@@ -123,12 +123,12 @@ const projects = [
     inProgress: false,
   },
   {
-    image: "/images/Zomato-Backend.jpg",
-    name: "Zomato Backend 🍅",
+    image: "/images/nearbyeats.png",
+    name: "NearByEats Backend 🍕",
     description:
       "This project is a backend system for a Zomato-like food delivery application. It is designed to handle various functionalities such as managing users, restaurants, menus, orders, and deliveries. Built with Spring Boot, the system ensures scalability, high performance, and efficient handling of requests in a production-grade environment.",
     techStack: "Spring Boot",
-    githubLink: "https://github.com/abhishekyadav2705/usePopcorn",
+    githubLink: "https://github.com/abhishekyadav2705/nearbyeats",
     liveLink: "https://abhishekyadavsusepopcorn.netlify.app/",
     swaggerLink: "",
     type: "backend",
