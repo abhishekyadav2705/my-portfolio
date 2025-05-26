@@ -75,6 +75,18 @@ const projects = [
     inProgress: false,
   },
   {
+    image: "/images/nearbyeats.png",
+    name: "NearByEats Backend 🍕",
+    description:
+      "This project is a backend system for a Zomato-like food delivery application. It is designed to handle various functionalities such as managing users, restaurants, menus, orders, and deliveries. Built with Spring Boot, the system ensures scalability, high performance, and efficient handling of requests in a production-grade environment.",
+    techStack: "Spring Boot",
+    githubLink: "https://github.com/abhishekyadav2705/nearbyeats",
+    liveLink: "",
+    swaggerLink: "",
+    type: "backend",
+    inProgress: false,
+  },
+  {
     image: "/images/portfolio.jpg",
     name: "Spring & React Showcase 🌿⚛️",
     description:
@@ -99,18 +111,6 @@ const projects = [
     inProgress: false,
   },
   {
-    image: "/images/linkedIn.jpg",
-    name: "LinkedIn Microservices 🍃⚙️",
-    description:
-      "A dynamic, scalable LinkedIn backend powered by Spring Boot microservices, enabling seamless professional connections with efficient data handling, API gateways, and cloud integration.",
-    techStack: "Spring Microservices",
-    githubLink: "https://github.com/abhishekyadav2705/usePopcorn",
-    liveLink: "https://abhishekyadavsusepopcorn.netlify.app/",
-    swaggerLink: "",
-    type: "backend",
-    inProgress: true,
-  },
-  {
     image: "/images/usePopcornTheme.jpg",
     name: "usePopcorn 🍿",
     description:
@@ -123,12 +123,12 @@ const projects = [
     inProgress: false,
   },
   {
-    image: "/images/nearbyeats.png",
-    name: "NearByEats Backend 🍕",
+    image: "/images/linkedIn.jpg",
+    name: "LinkedIn Microservices 🍃⚙️",
     description:
-      "This project is a backend system for a Zomato-like food delivery application. It is designed to handle various functionalities such as managing users, restaurants, menus, orders, and deliveries. Built with Spring Boot, the system ensures scalability, high performance, and efficient handling of requests in a production-grade environment.",
-    techStack: "Spring Boot",
-    githubLink: "https://github.com/abhishekyadav2705/nearbyeats",
+      "A dynamic, scalable LinkedIn backend powered by Spring Boot microservices, enabling seamless professional connections with efficient data handling, API gateways, and cloud integration.",
+    techStack: "Spring Microservices",
+    githubLink: "https://github.com/abhishekyadav2705/usePopcorn",
     liveLink: "https://abhishekyadavsusepopcorn.netlify.app/",
     swaggerLink: "",
     type: "backend",
