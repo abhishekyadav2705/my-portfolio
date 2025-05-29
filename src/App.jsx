@@ -92,21 +92,21 @@ function App() {
     <ThemeProvider>
       <div className="App">
         <ProgressBar />
-        {isOpen || override ? (
-          <>
-            <Head />
-            <AnimatedIntroSection />
-            <AboutSection id="about" />
-            <SkillsSection id="skills" />
-            <ProjectsSection id="projects" />
-            <ExperienceSection id="experience" />
-            <InteractiveTimeline />
-            <ContactSection id="contact" />
-            <Footer id="contact" />
-          </>
-        ) : (
+        {/* {isOpen || override ? ( */}
+        <>
+          <Head />
+          <AnimatedIntroSection />
+          <AboutSection id="about" />
+          <SkillsSection id="skills" />
+          <ProjectsSection id="projects" />
+          <ExperienceSection id="experience" />
+          <InteractiveTimeline />
+          <ContactSection id="contact" />
+          <Footer id="contact" />
+        </>
+        {/* ) : (
           <ClosedMessage onToggle={handleToggle} openingHour={openingHour} />
-        )}
+        )} */}
         <ToastContainer
           position="top-right"
           autoClose={3000}
