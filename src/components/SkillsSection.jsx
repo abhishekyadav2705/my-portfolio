@@ -136,6 +136,12 @@ const skills = [
     category: "Backend",
   },
   {
+    name: "Redis",
+    logo: "https://img.icons8.com/color/96/redis.png",
+    hoverColor: "#D82C20", // Official Redis red
+    category: "Backend",
+  },
+  {
     name: "Kafka",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg",
     hoverColor: "#000000", // Black for Kafka
