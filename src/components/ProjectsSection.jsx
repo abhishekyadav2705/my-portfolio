@@ -69,7 +69,7 @@ const projects = [
       "Uber-App is a robust ride-sharing service application developed using Spring Boot. The app utilizes the PostGIS extension to efficiently fetch and process the locations of riders and drivers. It features production-ready APIs and incorporates advanced strategies like Surge Pricing and Driver Matching to enhance user experience.",
     techStack: "Spring Boot, PostgreSQL, RESTful APIs",
     githubLink: "https://github.com/abhishekyadav2705/Uber_Backend",
-    liveLink: "https://uber-backend-dd9g.onrender.com",
+    liveLink: "https://uber-i8xg.onrender.com/swagger-ui/index.html",
     swaggerLink: "",
     type: "backend",
     inProgress: false,
