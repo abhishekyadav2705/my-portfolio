@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
 import styled, { keyframes } from "styled-components";
-import { ThemeContext } from "../context/ThemeContext"; // Import ThemeContext
-import { FaLinkedin } from "react-icons/fa";
+import { ThemeContext } from "../context/ThemeContext";
+import { FaLinkedin, FaFileAlt, FaGithub } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 const fadeIn = keyframes`
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 `;
 
 const Section = styled.section`
@@ -16,64 +17,64 @@ const Section = styled.section`
   height: 100vh;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  background-color: ${(props) =>
-    props.theme.background}; // Apply theme background
-  color: ${(props) => props.theme.color}; // Apply theme color
+  background-color: ${(props) => props.theme.background};
+  color: ${(props) => props.theme.color};
 `;
 
 const Title = styled.h1`
-  font-size: 3rem;
-  animation: ${fadeIn} 2.5s ease-in-out;
+  font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive */
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  animation: ${fadeIn} 1s ease forwards;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${(props) => props.theme.color}; // Apply theme color
+  color: ${(props) => props.theme.color};
+  text-align: center;
 `;
 
 const Subtitle = styled.h2`
   font-size: 2rem;
   color: #007bff;
-  animation: ${fadeIn} 2.5s ease-in-out;
+  margin-top: 0.5rem;
+  animation: ${fadeIn} 1.2s ease forwards;
 `;
 
 const Description = styled.p`
   font-size: 1.25rem;
   margin-top: 1rem;
   max-width: 600px;
-  animation: ${fadeIn} 3s ease-in-out;
-  color: ${(props) => props.theme.color}; // Apply theme color
+  animation: ${fadeIn} 1.4s ease forwards;
+  color: ${(props) => props.theme.color};
 `;
 
-const buttonPulse = keyframes`
-  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7); }
-  70% { transform: scale(1.05); box-shadow: 0 0 10px 20px rgba(0, 123, 255, 0); }
-  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 123, 255, 0); }
+const Actions = styled.div`
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  animation: ${fadeIn} 1.6s ease forwards;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
-const Button = styled.a`
+const ActionButton = styled.a`
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.6rem;
   padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: white;
-  background-color: #007bff;
-  border: 2px solid #0056b3;
-  border-radius: 50px;
+  background-color: ${(props) => props.bg || "#007bff"};
+  border-radius: 8px;
   text-decoration: none;
-  margin-top: 1.5rem;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
-  transition: background-color 0.3s, transform 0.3s;
-  animation: ${buttonPulse} 2s infinite;
-  &:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-  }
-`;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, background-color 0.25s ease;
 
-const LinkedInIcon = styled(FaLinkedin)`
-  margin-left: 0.5rem;
-  font-size: 1.5rem;
+  &:hover {
+    transform: translateY(-3px);
+    background-color: ${(props) => props.hover || "#0056b3"};
+  }
 `;
 
 const GifContainer = styled.div`
@@ -83,13 +84,13 @@ const GifContainer = styled.div`
 `;
 
 const AnimatedIntroSection = () => {
-  const { theme } = useContext(ThemeContext); // Use theme context
+  const { theme } = useContext(ThemeContext);
 
   return (
     <Section theme={theme}>
       <Title theme={theme}>
         Hello, I'm Abhishek Yadav
-        <GifContainer>
+        {/* <GifContainer>
           <iframe
             src="https://giphy.com/embed/uKM4c3IujlUmWkMVhd"
             width="100%"
@@ -100,21 +101,59 @@ const AnimatedIntroSection = () => {
             allowFullScreen
             title="Postman Gif"
           ></iframe>
-        </GifContainer>
+        </GifContainer> */}
       </Title>
       <Subtitle>Passionate Software Developer 💻✨</Subtitle>
       <Description theme={theme}>
         Crafting clean and functional web applications with React, Spring Boot,
         and JavaScript. Let's build something amazing together! 🚀😍
       </Description>
-      <Button
-        href="https://www.linkedin.com/in/abhishek-yadav-556228168/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Connect on LinkedIn
-        <LinkedInIcon />
-      </Button>
+
+      <Actions>
+        <ActionButton
+          href="https://www.linkedin.com/in/abhishek-yadav-556228168/"
+          target="_blank"
+          rel="noopener noreferrer"
+          bg="#007bff"
+          hover="#0056b3"
+        >
+          <FaLinkedin size={20} />
+          LinkedIn
+        </ActionButton>
+
+        <ActionButton
+          href="https://drive.google.com/file/d/1Iu6YO2cSpH78bxHlQY3XAkvfQi75AKCr/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          bg="#ff9800"
+          hover="#e68900"
+        >
+          <FaFileAlt size={20} />
+          Resume
+        </ActionButton>
+
+        <ActionButton
+          href="https://github.com/abhishekyadav2705"
+          target="_blank"
+          rel="noopener noreferrer"
+          bg="#24292f"
+          hover="#000000"
+        >
+          <FaGithub size={20} />
+          GitHub
+        </ActionButton>
+
+        <ActionButton
+          href="https://leetcode.com/abhishek_yadav/"
+          target="_blank"
+          rel="noopener noreferrer"
+          bg="#ffa116"
+          hover="#cc840e"
+        >
+          <SiLeetcode size={20} />
+          LeetCode
+        </ActionButton>
+      </Actions>
     </Section>
   );
 };
