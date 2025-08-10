@@ -96,38 +96,11 @@ const skills = [
     hoverColor: "#6DB33F", // Green for Spring Boot
     category: "Backend",
   },
-  // --- Frontend ---
   {
     name: "React",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     hoverColor: "#61DAFB", // Blue for React
     category: "Frontend",
-  },
-  {
-    name: "JavaScript",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    hoverColor: "#F0DB4F", // Yellow for JavaScript
-    category: "Frontend",
-  },
-  {
-    name: "HTML5",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-    hoverColor: "#E34F26", // Red-Orange for HTML5
-    category: "Frontend",
-  },
-  {
-    name: "CSS3",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    hoverColor: "#1572B6", // Blue for CSS3
-    category: "Frontend",
-  },
-
-  // --- Backend ---
-  {
-    name: "REST API",
-    logo: "https://img.icons8.com/?size=100&id=21888&format=png&color=000000",
-    hoverColor: "#FF5733", // Vibrant Orange-Red for APIs
-    category: "Backend",
   },
   {
     name: "Microservices",
@@ -155,6 +128,33 @@ const skills = [
     hoverColor: "#336791", // Dark Blue for PostgreSQL
     category: "Database",
   },
+  {
+    name: "JavaScript",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    hoverColor: "#F0DB4F", // Yellow for JavaScript
+    category: "Frontend",
+  },
+  {
+    name: "HTML5",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    hoverColor: "#E34F26", // Red-Orange for HTML5
+    category: "Frontend",
+  },
+  {
+    name: "CSS3",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    hoverColor: "#1572B6", // Blue for CSS3
+    category: "Frontend",
+  },
+
+  // --- Backend ---
+  {
+    name: "REST API",
+    logo: "https://img.icons8.com/?size=100&id=21888&format=png&color=000000",
+    hoverColor: "#FF5733", // Vibrant Orange-Red for APIs
+    category: "Backend",
+  },
+
   {
     name: "MySQL",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
