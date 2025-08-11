@@ -88,21 +88,7 @@ const AnimatedIntroSection = () => {
 
   return (
     <Section theme={theme}>
-      <Title theme={theme}>
-        Hello, I'm Abhishek Yadav
-        {/* <GifContainer>
-          <iframe
-            src="https://giphy.com/embed/uKM4c3IujlUmWkMVhd"
-            width="100%"
-            height="100%"
-            style={{ position: "relative" }}
-            frameBorder="0"
-            className="giphy-embed"
-            allowFullScreen
-            title="Postman Gif"
-          ></iframe>
-        </GifContainer> */}
-      </Title>
+      <Title theme={theme}>Hello, I'm Abhishek Yadav</Title>
       <Subtitle>Passionate Software Developer 💻✨</Subtitle>
       <Description theme={theme}>
         Crafting clean and functional web applications with React, Spring Boot,
@@ -122,9 +108,8 @@ const AnimatedIntroSection = () => {
         </ActionButton>
 
         <ActionButton
-          href="https://drive.google.com/file/d/1Iu6YO2cSpH78bxHlQY3XAkvfQi75AKCr/view?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/AbhishekYadavSDEResume.pdf"
+          download="AbhishekYadavSDEResume.pdf"
           bg="#ff9800"
           hover="#e68900"
         >
