@@ -36,7 +36,7 @@ const Title = styled.h2`
 
 const SkillGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 6 items per row */
+  grid-template-columns: repeat(7, 1fr); /* 6 items per row */
   gap: 2rem;
   justify-items: center;
 
@@ -50,8 +50,8 @@ const SkillGrid = styled.div`
 `;
 
 const SkillCard = styled.div`
-  width: 150px;
-  height: 200px;
+  width: 120px; /* was 150px */
+  height: 160px; /* was 200px */
   background: ${(props) => props.bg || props.theme.cardBackground || "#fff"};
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -63,17 +63,16 @@ const SkillCard = styled.div`
   cursor: pointer;
   border: 2px solid transparent;
   &:hover {
-    transform: scale(1.05) translateY(-8px); /* Move and scale on hover */
+    transform: scale(1.05) translateY(-8px);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
-    border-color: ${(props) =>
-      props.hoverColor || "#61DAFB"}; /* Different hover colors */
+    border-color: ${(props) => props.hoverColor || "#61DAFB"};
   }
 `;
 
 const SkillLogo = styled.img`
-  width: 60px;
-  height: 60px;
-  margin-bottom: 1rem;
+  width: 50px; /* smaller than before */
+  height: 50px;
+  margin-bottom: 0.8rem;
   transition: transform 0.3s;
 `;
 
