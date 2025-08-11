@@ -22,21 +22,33 @@ const Section = styled.section`
 `;
 
 const Title = styled.h1`
-  font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive */
+  font-family: "Rajdhani", sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
   animation: ${fadeIn} 1s ease forwards;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ${(props) => props.theme.color};
   text-align: center;
+  color: #00695c; /* Deep teal looks good on white */
 `;
 
+// const Title = styled.h1`
+//   font-family: "Share Tech Mono", monospace;
+//   font-size: clamp(2.5rem, 5vw, 4rem);
+//   font-weight: 400;
+//   letter-spacing: 1px;
+//   margin-bottom: 0.5rem;
+//   animation: ${fadeIn} 1s ease forwards;
+//   text-align: center;
+//   color: #37474f; /* Cool dark grey */
+// `;
+
 const Subtitle = styled.h2`
+  font-family: "Roboto Mono", monospace;
   font-size: 2rem;
-  color: #007bff;
+  color: #00897b;
   margin-top: 0.5rem;
+  letter-spacing: 0.5px;
   animation: ${fadeIn} 1.2s ease forwards;
 `;
 
@@ -89,7 +101,8 @@ const AnimatedIntroSection = () => {
   return (
     <Section theme={theme}>
       <Title theme={theme}>Hello, I'm Abhishek Yadav</Title>
-      <Subtitle>Passionate Software Developer 💻✨</Subtitle>
+      {/* <Subtitle>Passionate Software Developer 💻✨</Subtitle> */}
+      <Subtitle>⚡Full-Stack Java & React Engineer</Subtitle>
       <Description theme={theme}>
         Crafting clean and functional web applications with React, Spring Boot,
         and JavaScript. Let's build something amazing together! 🚀😍
