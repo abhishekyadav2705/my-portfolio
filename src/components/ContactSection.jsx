@@ -1,15 +1,16 @@
 import React, { useContext, useState } from "react";
 import styled, { keyframes } from "styled-components";
-import { ThemeContext } from "../context/ThemeContext"; // Import ThemeContext
+import { ThemeContext } from "../context/ThemeContext";
 import { FaLinkedin, FaGithub, FaTwitter, FaFacebook } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import emailjs from "@emailjs/browser";
 
+// ===== Styled Components =====
 const Section = styled.section`
   padding: 2rem 1rem;
-  background-color: ${(props) =>
-    props.theme.background}; // Apply theme background
-  color: ${(props) => props.theme.color}; // Apply theme color
+  background-color: ${(props) => props.theme.background};
+  color: ${(props) => props.theme.color};
   font-family: "Montserrat", sans-serif;
 `;
 
@@ -22,7 +23,7 @@ const Container = styled.div`
 const Title = styled.h2`
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: ${(props) => props.theme.color}; // Apply theme color
+  color: ${(props) => props.theme.color};
 `;
 
 const SocialLinks = styled.div`
@@ -38,7 +39,6 @@ const SocialLink = styled.a`
   color: #007bff;
   text-decoration: none;
   transition: color 0.3s;
-
   &:hover {
     color: #0056b3;
   }
@@ -58,7 +58,6 @@ const Input = styled.input`
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
-
   &:focus {
     border-color: #007bff;
     outline: none;
@@ -73,7 +72,6 @@ const TextArea = styled.textarea`
   border-radius: 5px;
   font-size: 1rem;
   resize: vertical;
-
   &:focus {
     border-color: #007bff;
     outline: none;
@@ -95,15 +93,15 @@ const SubmitButton = styled.button`
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
-
   &:hover {
     background-color: #0056b3;
     animation: ${animateButton} 0.5s ease-in-out;
   }
 `;
 
+// ===== Component =====
 const ContactSection = () => {
-  const { theme } = useContext(ThemeContext); // Use theme context
+  const { theme } = useContext(ThemeContext);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -112,18 +110,35 @@ const ContactSection = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    toast.info(
-      "Don't worry, it's a dummy send message button with no backend attached to it."
-    );
-    console.log(formData);
+
+    const dataToSend = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+      time: new Date().toLocaleString(),
+    };
+
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        dataToSend,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        toast.success("📨 Your message has been sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+        console.log("Data to send:", dataToSend);
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        toast.error("❌ Failed to send message. Please try again.");
+      });
   };
 
   return (
@@ -131,36 +146,26 @@ const ContactSection = () => {
       <Container>
         <Title theme={theme}>Contact Me</Title>
         <p>
-          I'd love to connect with you! Feel free to reach out to me on my
-          social profiles or via the contact form below.
+          I'd love to connect with you! Reach out via the form below or on my
+          socials.
         </p>
         <SocialLinks>
           <SocialLink
             href="https://www.linkedin.com/in/abhishek-yadav-556228168/"
             target="_blank"
-            rel="noopener noreferrer"
           >
             <FaLinkedin />
           </SocialLink>
           <SocialLink
             href="https://github.com/abhishekyadav2705"
             target="_blank"
-            rel="noopener noreferrer"
           >
             <FaGithub />
           </SocialLink>
-          <SocialLink
-            href="https://twitter.com/abhishekyadav"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <SocialLink href="https://twitter.com/abhishekyadav" target="_blank">
             <FaTwitter />
           </SocialLink>
-          <SocialLink
-            href="https://facebook.com/abhishekyadav"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <SocialLink href="https://facebook.com/abhishekyadav" target="_blank">
             <FaFacebook />
           </SocialLink>
         </SocialLinks>
