@@ -105,7 +105,7 @@ const AnimatedIntroSection = () => {
       <Subtitle>⚡Full-Stack Java & React Engineer</Subtitle>
       <Description theme={theme}>
         Crafting clean and functional web applications with React, Spring Boot,
-        and JavaScript. Let's build something amazing together! 🚀😍
+        and JavaScript. Let's build something amazing together! 🔥🚀
       </Description>
 
       <Actions>

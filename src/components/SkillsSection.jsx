@@ -50,21 +50,30 @@ const SkillGrid = styled.div`
 `;
 
 const SkillCard = styled.div`
-  width: 120px; /* was 150px */
-  height: 160px; /* was 200px */
-  background: ${(props) => props.bg || props.theme.cardBackground || "#fff"};
+  width: 120px;
+  height: 160px;
+  background: ${(props) => props.bg || props.theme.cardBackground};
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px
+    ${(props) =>
+      props.theme.mode === "dark"
+        ? "rgba(255, 255, 255, 0.05)"
+        : "rgba(0, 0, 0, 0.1)"};
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   border: 2px solid transparent;
+
   &:hover {
     transform: scale(1.05) translateY(-8px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 24px
+      ${(props) =>
+        props.theme.mode === "dark"
+          ? "rgba(255, 255, 255, 0.1)"
+          : "rgba(0, 0, 0, 0.15)"};
     border-color: ${(props) => props.hoverColor || "#61DAFB"};
   }
 `;
@@ -79,8 +88,22 @@ const SkillLogo = styled.img`
 const SkillName = styled.p`
   font-size: 1rem;
   font-weight: 500;
-  color: ${(props) => props.theme.color};
+  color: ${(props) =>
+    props.theme.mode === "dark" ? "#ffffff" : props.theme.color};
+  text-align: center;
 `;
+
+export const lightTheme = {
+  background: "#fff",
+  color: "#000",
+  cardBackground: "#f9f9f9",
+};
+
+export const darkTheme = {
+  background: "#121212", // main background
+  color: "#ffffff", // general text
+  cardBackground: "#1f1f2e", // skill card background (slightly lighter)
+};
 
 const skills = [
   {
@@ -190,10 +213,11 @@ const skills = [
   },
   {
     name: "Swagger",
-    logo: "https://static-00.iconduck.com/assets.00/swagger-icon-2048x2048-563qbzey.png",
+    logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/swagger.svg",
     hoverColor: "#85EA2D", // Green for Swagger
     category: "Tools",
   },
+
   {
     name: "Maven",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg",
