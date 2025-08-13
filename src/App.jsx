@@ -100,7 +100,7 @@ function App() {
           <SkillsSection id="skills" />
           <ProjectsSection id="projects" />
           <ExperienceSection id="experience" />
-          <InteractiveTimeline />
+          {/* <InteractiveTimeline /> */}
           <ContactSection id="contact" />
           <Footer id="contact" />
         </>
