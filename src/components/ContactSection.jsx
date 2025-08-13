@@ -118,7 +118,7 @@ const ContactSection = () => {
     const dataToSend = {
       from_name: formData.name,
       from_email: formData.email,
-      message: formData.message,
+      user_message: formData.message,
       time: new Date().toLocaleString(),
     };
 
