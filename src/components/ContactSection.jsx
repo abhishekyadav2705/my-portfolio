@@ -2,8 +2,7 @@ import React, { useContext, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { ThemeContext } from "../context/ThemeContext";
 import { FaLinkedin, FaGithub, FaTwitter, FaFacebook } from "react-icons/fa";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 
 // ===== Styled Components =====
@@ -123,6 +122,11 @@ const ContactSection = () => {
       time: new Date().toLocaleString(),
     };
 
+    const toastId = "contact-toast";
+
+    // Dismiss previous toast if any
+    if (toast.isActive(toastId)) toast.dismiss(toastId);
+
     emailjs
       .send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -131,13 +135,16 @@ const ContactSection = () => {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(() => {
-        toast.success("📨 Your message has been sent successfully!");
+        toast.success("📨 Your message has been sent successfully!", {
+          toastId,
+        });
         setFormData({ name: "", email: "", message: "" });
-        console.log("Data to send:", dataToSend);
       })
       .catch((error) => {
+        toast.error("❌ Failed to send message. Please try again.", {
+          toastId,
+        });
         console.error("EmailJS Error:", error);
-        toast.error("❌ Failed to send message. Please try again.");
       });
   };
 
@@ -196,7 +203,6 @@ const ContactSection = () => {
           />
           <SubmitButton type="submit">Send Message</SubmitButton>
         </Form>
-        <ToastContainer position="top-right" autoClose={5000} />
       </Container>
     </Section>
   );
