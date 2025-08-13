@@ -100,18 +100,6 @@ const projects = [
     inProgress: true,
   },
   {
-    image: "/images/portfolio.jpg",
-    name: "Spring & React Showcase 🌿⚛️",
-    description:
-      "Developed a portfolio in React.js🚀, showcasing my work and skills. Integrated smooth animations, a responsive design, and dynamic content. Deployed on Netlify for seamless access and performance.",
-    techStack: "React.js",
-    githubLink: "https://github.com/abhishekyadav2705/my-portfolio/",
-    liveLink: "https://abhishekyadavsportfolio.netlify.app/",
-    swaggerLink: "",
-    type: "frontend",
-    inProgress: false,
-  },
-  {
     image: "/images/weather-card.jpg",
     name: "Weather Whiz 🌤️",
     description:
@@ -131,6 +119,18 @@ const projects = [
     techStack: "React",
     githubLink: "https://github.com/abhishekyadav2705/usePopcorn",
     liveLink: "https://abhishekyadavsusepopcorn.netlify.app/",
+    swaggerLink: "",
+    type: "frontend",
+    inProgress: false,
+  },
+  {
+    image: "/images/portfolio.jpg",
+    name: "Spring & React Showcase 🌿⚛️",
+    description:
+      "Developed a portfolio in React.js🚀, showcasing my work and skills. Integrated smooth animations, a responsive design, and dynamic content. Deployed on Netlify for seamless access and performance.",
+    techStack: "React.js",
+    githubLink: "https://github.com/abhishekyadav2705/my-portfolio/",
+    liveLink: "https://abhishekyadavsportfolio.netlify.app/",
     swaggerLink: "",
     type: "frontend",
     inProgress: false,
