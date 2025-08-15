@@ -75,11 +75,12 @@ const AboutSection = () => {
           <Highlight>Java ☕</Highlight>, <Highlight>Spring Boot 🌱</Highlight>,{" "}
           <Highlight>JavaScript 🟨</Highlight>, and{" "}
           <Highlight>React ⚛️</Highlight>, I strive to build high-quality,
-          scalable applications. 🚀 My journey in software development has been
+          scalable applications. 🚀
+          {/* My journey in software development has been
           driven by my curiosity and desire to constantly learn and grow. 🌟
           Whether it's exploring new technologies or improving existing skills,
           I am committed to pushing the boundaries and delivering excellence.
-          ✨💻
+          ✨💻 */}
         </Text>
       </Container>
     </Section>
