@@ -102,7 +102,7 @@ const AnimatedIntroSection = () => {
     <Section theme={theme}>
       <Title theme={theme}>Hello, I'm Abhishek Yadav</Title>
       {/* <Subtitle>Passionate Software Developer 💻✨</Subtitle> */}
-      <Subtitle>⚡Full-Stack Java & React Engineer</Subtitle>
+      <Subtitle>⚡Full-Stack Java & React Engineer{" </>"}</Subtitle>
       <Description theme={theme}>
         Crafting clean and functional web applications with React, Spring Boot,
         and JavaScript. Let's build something amazing together! 🔥🚀
