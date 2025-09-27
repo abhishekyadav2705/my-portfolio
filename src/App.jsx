@@ -44,50 +44,6 @@ function App() {
     setOverride(!override);
   };
 
-  // useEffect(() => {
-  //   let currentToastId = null;
-
-  //   const handleScroll = () => {
-  //     const sectionIds = [
-  //       "about",
-  //       "experience",
-  //       "skills",
-  //       "projects",
-  //       "contact",
-  //     ];
-  //     const currentScrollPosition = window.scrollY + window.innerHeight / 2;
-
-  //     sectionIds.forEach((id) => {
-  //       const section = document.getElementById(id);
-  //       if (
-  //         section &&
-  //         section.offsetTop <= currentScrollPosition &&
-  //         section.offsetTop + section.offsetHeight > currentScrollPosition
-  //       ) {
-  //         const newToastId = `section-toast-${id}`;
-  //         if (currentToastId !== newToastId) {
-  //           toast.dismiss(currentToastId); // Dismiss existing toast
-  //           toast.info(
-  //             `You are now viewing the ${
-  //               id.charAt(0).toUpperCase() + id.slice(1)
-  //             } section!`,
-  //             {
-  //               toastId: newToastId,
-  //             }
-  //           );
-  //           currentToastId = newToastId;
-  //         }
-  //       }
-  //     });
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //     toast.dismiss(); // Dismiss all toasts on component unmount
-  //   };
-  // }, []);
-
   return (
     <ThemeProvider>
       <div className="App">
