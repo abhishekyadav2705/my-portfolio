@@ -131,6 +131,12 @@ const skills = [
     category: "Backend",
   },
   {
+    name: "AWS",
+    logo: "https://img.icons8.com/color/96/amazon-web-services.png",
+    hoverColor: "#FF9900", // AWS brand orange
+    category: "Cloud",
+  },
+  {
     name: "Redis",
     logo: "https://img.icons8.com/color/96/redis.png",
     hoverColor: "#D82C20", // Official Redis red
