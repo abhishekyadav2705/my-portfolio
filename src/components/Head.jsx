@@ -81,6 +81,13 @@ const Head = () => {
         <NavLink href="#about">About</NavLink>
         <NavLink href="#experience">Experience</NavLink>
         <NavLink href="#projects">Projects</NavLink>
+        <NavLink
+          href="https://abhishekyadavsblogs.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Blogs
+        </NavLink>
         <NavLink href="#contact">Contact</NavLink>
       </NavLinks>
       <ThemeSwitcher onClick={toggleTheme}>
