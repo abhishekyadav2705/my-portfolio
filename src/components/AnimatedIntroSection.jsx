@@ -142,7 +142,7 @@ const AnimatedIntroSection = () => {
         </ActionButton>
 
         <ActionButton
-          href="https://leetcode.com/abhishek_yadav/"
+          href="https://leetcode.com/u/iamabhishekyadav/"
           target="_blank"
           rel="noopener noreferrer"
           bg="#ffa116"
